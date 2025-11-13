@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            text-align: center;
+            color: white;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        input {
+            background: white;
+            color: black;
+        }
+        button {
+            background: #ff477e;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #ff0055;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetes Prediction System</h1>
+        <form action="/predict" method="post">
+            <label>Pregnancies:</label>
+            <input type="number" name="pregnancies" required>
+            
+            <label>Glucose:</label>
+            <input type="number" name="glucose" required>
+            
+            <label>Blood Pressure:</label>
+            <input type="number" name="blood_pressure" required>
+            
+            <label>Skin Thickness:</label>
+            <input type="number" name="skin_thickness" required>
+            
+            <label>Insulin:</label>
+            <input type="number" name="insulin" required>
+            
+            <label>BMI:</label>
+            <input type="number" name="bmi" step="0.1" required>
+            
+            <label>Diabetes Pedigree Function (DPF):</label>
+            <input type="number" name="dpf" step="0.001" required>
+            
+            <label>Age:</label>
+            <input type="number" name="age" required>
+            
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
+
